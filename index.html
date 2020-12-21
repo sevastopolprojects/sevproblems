@@ -87,6 +87,7 @@
 
          @import url(https://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
          .button{
+            cursor: pointer;
             background: #ECECEC;
             border-radius: 15px;
             border-color: black;
@@ -225,6 +226,39 @@ var last = [
 var cur_val = ""
 var check_val = ""
 
+let req = new XMLHttpRequest();
+let data_json = new Array(0)
+
+
+req.onreadystatechange = () => {
+if (req.readyState == XMLHttpRequest.DONE) {
+    var raw_json = req.responseText
+    data_json = JSON.parse(raw_json)
+}
+};
+
+req.open("GET", "https://api.jsonbin.io/b/5fe0eaf887e11161f87d701a/latest", true);
+// req.setRequestHeader("secret-key", "<SECRET_KEY>");
+req.send();
+
+function addNew(){
+   data_ot = {
+      "title": cur_val
+   }
+   data_json.unshift(data_ot)
+   console.log(JSON.stringify(data_json))
+
+   let reqUpd = new XMLHttpRequest();
+   reqUpd.onreadystatechange = () => {
+   if (reqUpd.readyState == XMLHttpRequest.DONE) {
+      console.log(reqUpd.responseText);
+   }
+   };
+   reqUpd.open("PUT", "https://api.jsonbin.io/b/5fe0eaf887e11161f87d701a", true);
+   reqUpd.setRequestHeader("Content-Type", "application/json");
+   reqUpd.send(JSON.stringify(data_json));
+}
+
 
 function getValue(lst) {
     var minNumber = 0; // The minimum number you want
@@ -266,6 +300,7 @@ function myFunction() {
       removeSpinner($('div[class="content"]'))
     }, random_timer);
    check_val = cur_val
+   addNew()
 
 
    // 
