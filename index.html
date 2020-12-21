@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  
+  <link rel="stylesheet" href="/sev_problems/my-site.css">
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Проблемы Севастополя Онлайн</title>
+  <style> 
+         .GFG { 
+            border-radius: 35px; 
+            background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 10px; 
+            text-align: center; 
+            width: auto; 
+            height: auto; 
+            font-family: 'Montserrat', sans-serif;
+         } 
+         .monospace {
+            font-family: "Montserrat", Courier, monospace;
+         }
+         .striped-text {
+            font-family: 'Rubik One', sans-serif;
+            font-size: 70px;
+            text-transform: uppercase;
+            background: repeating-linear-gradient(white, white 2px, #7AB4E2 2px, #7AB4E2 3px);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #183D58;
+            display: table;
+            margin: 20px auto;   
+            border: 3px solid;
+            padding: 0.3em 0.6em ;
+            border-image: linear-gradient(20deg, #f92056 38%, #00deff 65%);
+            border-image-slice: 1;
+            border-radius: 25px;
+         }
+
+         @import url(https://fonts.googleapis.com/css?family=Rubik+One&subset=latin,cyrillic);
+         .gradient-text {
+            font-family: 'Rubik One', sans-serif;
+            font-size: 50px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #0B2349;
+            display: table;
+            margin: 20px auto;
+            padding-left: 20px;
+            text-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+
+         }
+         .ip2 {
+            display: inline-block;
+            /*border: solid 1px black;*/
+            border-style: dotted;
+            border-radius: 25px;
+            word-wrap: break-word;
+            max-width: 50%;
+            min-width: 50%;
+            min-height: 100px;
+            margin-left: 20px;
+
+            padding: 20px;
+            outline: 0;
+            /*padding-left: 20px;*/
+            font-family: 'Rubik One', sans-serif;
+            font-size: 20px;
+         }
+         .ip2:focus{
+            outline:0;
+         }
+         .ip2[placeholder]:empty:before {
+            content: attr(placeholder);
+            color: #555; 
+         }
+         .ip2[placeholder]:empty:focus:before {
+            content: "";
+         }
+
+         @import url(https://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
+         .button{
+            background: #ECECEC;
+            border-radius: 15px;
+            border-color: black;
+            padding: 10px 20px;
+            padding-left: 20px;
+            display: block;
+            font-family: arial;
+            font-weight: bold;
+            color:#7f7f7f;
+            text-decoration: none;
+            text-shadow:0px 1px 0px #fff;
+            text-align: center;
+            border:1px solid #a7a7a7;
+            width: 50%;
+            /*margin:10px;*/
+            margin-top:10px;
+            margin-left: 20px;
+            box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+            -webkit-transition:box-shadow 0.5s;
+         }
+         .button i{
+            float: right;
+            margin-top: 2px;
+         }
+         .button:hover{
+            box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+         }
+         .button:active{
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+            background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+         }
+         
+         #result{
+            font-family: 'Rubik One', sans-serif;
+            font-size: 20px;
+            margin-left: 20px;
+
+         }
+         #description{
+            font-family: 'Rubik One', sans-serif;
+            font-size: 20px;
+            margin-left: 20px;
+         }
+  </style> 
+
+
+  
+ </head>
+   <body>
+      <div class="GFG"> 
+        <h2 class="striped-text"> Проблемы Севастополя Онлайн </h2> 
+        <p id="description">Сайт создан при поддержке правительства и может быть использован в целях оперативного решения проблем севастопольцев.</p> 
+    </div> 
+    
+
+
+   <div class="container">
+      <div class="shaped"></div>
+
+      <div class="content">
+         <h1  class="gradient-text" >Пожалуйста, опишите Вашу проблему в форме ниже</h1>
+         <div contenteditable="true" class="ip2" placeholder="Опишите проблему здесь..."></div>
+         <div class="button" onclick="myFunction()"><span>Получить ответ</span></div>
+         <!-- <div class="spinner"></div> -->
+         <p id="result"></p> 
+
+
+         
+      </div>
+   </div>
+
+<script>
+
+var first = [
+   "Здравствуйте!",
+   "Доброго времени суток.",
+   "Добрый день!",
+   "Приветствуем Вас!",
+   "Спасибо за обращение."]
+var second = [
+   "Информируем Вас, что",
+   "По поводу Вашего обращения хочется ответить следующее:",
+   "Мы Вас услышали и стоит отметить, что",
+   "Ваше мнение для нас очень важно, но",
+   "Следует отметить,",
+   "Обращаем Ваше внимание,",
+   "Данная проблема была у нас в редакции не первый раз, поэтому информируем Вас о том, что",
+   "К сожалению, мы ничем пока не можем помочь, единственное, на что хочется обратить внимание, это то, что",
+   "Стоить напомнить, что",
+   "Может быть, Вы не в курсе, но",
+   "Как известно,",
+   "Наверняка Вы догадываетесь, что",
+   "Можно было было бы и пропустить это обращение, но все же",
+   "Вам, как жителю Севастополя, стоит напомнить, что",
+   "Дело в том, что",
+   "Как бы Вы не пытались искажать факты,",
+   "Даже если Вам не стыдно такое писать, то отметим, что"
+
+   ]
+var third = [
+   "при Украине вообще ничего не делалось, как при России. Наберитесь терпения и прекратите критиковать власть.",
+   "нытье ничем не поможет. Хотите, чтобы стало лучше - начните с себя!",
+   "жизнь можно наблюдать в разных красках, пока кто-то вечно чем-то недоволен, другой находит поводы для радости.",
+   "если Вас что-то не устраивает - валите на Украину.",
+   "мы в марте 2014 года единогласно приняли решение, о котором сейчас рассуждать - просто преступление. Мы всегда были, есть и будем с Россией!",
+   "это - очередной вызов для Севастополя. Только стиснув зубы и зажав пояса, мы сможем вместе решить данную проблему.",
+   "данная проблема имеет исключительный характер и может быть решена только Вами.",
+   "в любом случае важен уровень патриотического отношения к городу. Ваша проблема - не исключение.",
+   "напомним Вам, что сейчас всем нелегко и патриотизм - это последнее, что у нас осталось.",
+   "мы обязательно приложим все усилия к решению Вашего вопроса. Потребуется время для того, чтобы навести справки и поднять данные из архива похожих случаев.",
+   "при Украине многие вещи были незаконны, а сейчас все делается для граждан и только в соответствии с законами Российской федерации.",
+   "когда севастопольцы определили свое будущее в 2014 году, таких вопросов тогда не возникло бы. Возможно, Ваша проблема не столь серьезная?",
+   "в 90-е вообще люди жили без горячей воды, электричества и ничего, выжили. Так что потерпите немного.",
+   "на западе подобные проблемы вообще никак не обсуждаются. Наберитесь терпения, Вам обязательно когда-нибудь да помогут.",
+   "подобным обращением Вы только пытаетесь оскорбить представителей власти, лишний раз сказав не по делу. Как же много нытиков развелось в городе...",
+   "никто не говорил, что после референдума будет легко. Только при Вашем непосредственном участии в решении проблемы будет прогресс.",
+   "у нас в последнее время часто можно услышать, что если что-то делают, то плохо. Но при этом если не делают, то тоже плохо. Хватит ныть!",
+   "если Вы такой умный и своим обращением дискредитируете действующую власть, то почему Вы до сих пор не президент? Или у по-Вашему у нас есть достойные кандидатуры?",
+   "мы сейчас живем и развиваемся активным темпом. Или же по-Вашему при украинской оккупации лучше было?"
+
+]
+var last = [
+   "Хорошего Вам дня и спасибо за обращение!",
+   "До свидания!",
+   "Спасибо за обращение.",
+   "Благодарим Вас за вопрос.",
+   "Всего доброго!",
+   "Хорошего настроения! Держитесь там!",
+   "Спасибо Вам за использование нашего сервиса!",
+   "До новых встреч!",
+   "Надеемся, что мы хоть как-то Вам помогли.",
+   "Держитесь!",
+   "Желаем Вам хорошего дня!",
+   "Успехов Вам!"
+]
+var cur_val = ""
+var check_val = ""
+
+
+function getValue(lst) {
+    var minNumber = 0; // The minimum number you want
+    var maxNumber = lst.length; // The maximum number you want
+    var randomnumber = Math.floor(Math.random() * maxNumber); // Generates random number
+    var random_val = lst[randomnumber]
+    return random_val; // Returns false just to tidy everything up
+}
+
+function myFunction() {
+   cur_val = document.getElementsByClassName('ip2')[0].innerHTML
+   if( cur_val == "" ) 
+      {
+      alert("Заполните форму, пожалуйста!");
+      document.getElementsByClassName('ip2')[0].style.borderColor = "red";
+      return false;
+      }
+   else{
+      document.getElementsByClassName('ip2')[0].style.borderColor = "black";
+   }
+   if(cur_val == check_val){
+      alert("Введите уже другой вопрос")
+      return false;
+   }
+
+   document.getElementById("result").innerHTML = ""
+   addSpinner($('div[class="content"]'))
+   var num = getValue(first) 
+   var n_sec = getValue(second)
+   var res = getValue(third)
+   var bye = getValue(last)
+   var random_timer = Math.floor(Math.random() * 3000)
+   console.log(random_timer)
+
+   setTimeout(function(){
+      document.getElementById("result").innerHTML = [num, n_sec, res, bye].join(" ");
+    }, random_timer + 500);
+   setTimeout(function(){
+      removeSpinner($('div[class="content"]'))
+    }, random_timer);
+   check_val = cur_val
+
+
+   // 
+}
+
+function addSpinner(el, static_pos)
+{
+  var spinner = el.children('.spinner');
+  if (spinner.length && !spinner.hasClass('spinner-remove')) return null;
+  !spinner.length && (spinner = $('<div class="spinner' + (static_pos ? '' : ' spinner-absolute') + '"/>').appendTo(el));
+  animateSpinner(spinner, 'add');
+}
+
+function removeSpinner(el, complete)
+{
+  var spinner = el.children('.spinner');
+  spinner.length && animateSpinner(spinner, 'remove', complete);
+}
+
+function animateSpinner(el, animation, complete)
+{
+  if (el.data('animating')) {
+    el.removeClass(el.data('animating')).data('animating', null);
+    el.data('animationTimeout') && clearTimeout(el.data('animationTimeout'));
+  }
+  el.addClass('spinner-' + animation).data('animating', 'spinner-' + animation);
+  el.data('animationTimeout', setTimeout(function() { animation == 'remove' && el.remove(); complete && complete(); }, parseFloat(el.css('animation-duration')) * 1000));
+}
+
+</script>
+
+</body>
+</html>

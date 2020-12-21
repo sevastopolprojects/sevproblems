@@ -1,0 +1,75 @@
+﻿.container {
+   height:100vh;
+   wight:100vw;
+}
+.shaped {
+   background: black url(https://avatars.mds.yandex.net/get-pdb/2848824/9ed7a8d5-b53b-486e-b4dc-b6a890e5e6e7/s1200) ;
+   background-repeat: no-repeat;  
+   background-position: 50% 0%;
+   background-size: 100% 50%;
+   /*center top no-repeat */
+
+   height:100%;
+   width:40vw;
+   background-size:cover;
+   float:right;
+   shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+   shape-margin:20px;
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+           clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%)
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner,
+.spinner:before {
+  width: 80px;
+  height: 80px;
+  /*margin-top: 0px;*/
+  /*margin-left: 25%;*/
+  box-sizing: border-box;
+}
+
+.spinner:before {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  animation: spinner .6s linear infinite;
+}
+
+.spinner-absolute {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  margin-top: 20px;
+  margin-left: 0%;
+}
+
+/* Animations */
+
+.spinner-add,
+.spinner-remove {
+  animation-fill-mode: both;
+  animation-duration: .4s;
+}
+
+.spinner-add {
+  animation-name: spinner-add;
+}
+
+@keyframes spinner-add {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
+.spinner-remove {
+  animation-name: spinner-remove;
+}
+
+@keyframes spinner-remove {
+  to {transform: scale(0);}
+} 
